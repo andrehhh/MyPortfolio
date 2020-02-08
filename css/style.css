@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto&display=swap');
+
+
+:root {
+    --tag : #808080;
+    --element: #2566ca;
+    --attribute: #9cdcfe;
+    --symbol: #d4d4d4;
+    --attribute-text: #ce9178;
+    --primary: #c3cccc;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 .animation {
@@ -10,27 +27,202 @@
 }
 
 .dummy-box-wrapper {
-    width: 80%;
+    width: 100%;
     height: 100vh;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-content: center;
+    justify-items: center;
 }
 
 .dummy-box-1 {
-    width: 50px;
-    height: 50px;
-    border-left: 0.6em solid #808080;
-    border-bottom: 0.6em solid #808080;
-    rotate: 45deg;
-    justify-self: right;
+    width: 1em;
+    height: 1em;
+    border-left: 0.3em solid var(--tag);
+    border-bottom: 0.3em solid var(--tag);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 48.7%;
+    left: 38.8%;
+    animation: dummy1 1s ease;
 }
 
 .dummy-box-2 {
+    width: 1em;
+    height: 1em;
+    border-right: 0.3em solid var(--tag);
+    border-bottom: 0.3em solid var(--tag);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 48.7%;
+    right: 38.8%;
+    animation: dummy2 1s ease;
+}
+
+.introduction-text {
+    display: flex;
+    color: var(--tag);
+    align-items: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 32px;
+    opacity: 0;
+    animation: intro 1s ease-in forwards;
+    animation-delay: 1s;
+}
+
+.div-text {
+    color: var(--element);
+}
+
+.class-text {
+    color: var(--attribute);
+}
+
+.equals-text {
+    color: var(--symbol);
+}
+
+.quot-text {
+    color: var(--attribute-text);
+}
+
+.frame2 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #1e1e1e;
+    animation: frame2 1s ease forwards;
+    animation-delay: 3s;
+    overflow: hidden;
+}
+
+.header-animation {
+    position: absolute;
+    height: 29px;
+    width: 100%;
+    z-index: -1;
+    transform: translateX(-100%);
+    border-bottom: 1px solid white;
+    animation: headerLine 1s forwards ease-out;
+    animation-delay: 4s;
+}
+
+.header {
+    background-color: #3c3c3c;
+    height: 30px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-content: center;
+    justify-items: center;
+    opacity: 0;
+    animation: header ease 2s forwards;
+    animation-delay: 5s;
+}
+
+.logo {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-links {
+    justify-self: left;
+}
+
+.header-links li{
+    display: inline;
+    margin: 0 15px;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.header-links a:hover {
+    color: white;
+}
+
+.sidebar {
     width: 50px;
-    height: 50px;
-    border-right: 0.6em solid #808080;
-    border-bottom: 0.6em solid #808080;
-    rotate: -45deg;
+    height: 100vh;
+    background-color: #333333;
+    opacity: 0;
+    animation: sidebar ease 2s forwards;
+    animation-delay: 5s;
+}
+
+.sidebar li {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    align-items: center;
+    justify-items: center;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 15px 0;
+}
+
+.sidebar li:hover {
+    border-left: 2px solid white;
+}
+
+.sidebar a:hover {
+    color: white;
+}
+
+
+@keyframes intro {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dummy1 {
+    0% {
+        left: 48.5%;
+    }
+}
+
+@keyframes dummy2 {
+    0% {
+        right: 48.5%;
+    }
+}
+
+@keyframes frame2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes headerLine {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes header {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sidebar {
+    100% {
+        opacity: 1;
+    }
 }
