@@ -6,12 +6,18 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2ce75ae504.js" crossorigin="anonymous"></script>
 
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
-    <main>
+    <div class="container-left"></div>
+    <div class="container-right"></div>
+
+    <!-- Home -->
+    <div class="home">
+
         <div class="front-background">
+            <a class="logo" href="/">Dre</a>
             <div class="main-left">
                 <div class="social">
                     <ul>
@@ -21,22 +27,55 @@
                         <li><a href="#"><i class="fas fa-envelope"></i></a></li>
                     </ul>
                 </div>
-                <a href= "#" class="about-me"><i class="fas fa-arrow-down"></i>About</i></a>
+                <a class="bottom-left-button" onclick="homeAbout()"><i class="fas fa-arrow-down"></i><div class="text">About</div></i></a>
             </div>
 
             <div class="main-right">
-                <a href="#" class="contact">contact</a>
-                <a href= "#" class="projects">Projects<i class="fas fa-arrow-down"></i></a>
+                <a class="contact">contact</a>
+                <a class="bottom-right-button" onclick="homeProjects()"><div class="text">Projects</div><i class="fas fa-arrow-down"></i></a>
             </div>
         </div>
 
-        <div class="intro-title">
-            Hello, I'm Andre!
+        <div class="intro-container">
+            <div class="intro-title">
+                <div class="hello">Hello,&nbsp;</div>
+                                   I'm Andre!
+            </div>
+            <div class="intro-1">
+                <div class="intro-line-1">I design and code&nbsp;</div>
+                                          websites.
+            </div>
+            <div class="intro-2">
+                <div class="intro-line-2">I am looking for&nbsp;</div>
+                                          a 3 months&nbsp;<a href="#" class="internship">Internship</a>
+            </div>
         </div>
-        <div class="intro">
-            I design and code website.
-        </div>
-    </main>
 
+    </div>
+    <!-- /Home -->
+
+
+    <!-- About -->
+    <div class="about">
+        <a class="logo" onclick="aboutHome()">Dre</a>
+        <a class="bottom-right-button" onclick="aboutHome()"><div class="text">Home</div><i class="fas fa-arrow-down"></i></a>
+        <div class="container">
+
+        </div>
+    </div>
+    <!-- /About -->
+
+
+    <!-- Projects -->
+    <div class="projects">
+        <a class="logo" onclick="projectsHome()">Dre</a>
+        <a class="bottom-left-button" onclick="projectsHome()"><i class="fas fa-arrow-down"></i><div class="text">Home</div></i></a>
+        <div class="container">
+
+        </div>
+    </div>
+    <!-- /Projects -->
+
+    <script src="script.js"></script>
 </body>
 </html>
