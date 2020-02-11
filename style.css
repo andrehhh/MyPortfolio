@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Carter+One&display=swap');
 
 :root {
-    --red: #f6511d;
+    --red: #f6361d;
     --blue: #00a6ed;
 }
 
@@ -14,16 +14,10 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #FFFFFF;
-    overflow-x: hidden;
-}
-
-.container-left {
-    position: absolute;
-    width: 5%;
+    width: 100%;
     height: 100vh;
-    top:0;
-    left: 0;
-    background-color: white;
+    position: fixed;
+    overflow: hidden;
 }
 
 /* Home */
@@ -31,6 +25,12 @@ body {
 .home {
     display: block;
     transition: 500ms;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .front-background {
@@ -57,9 +57,32 @@ body {
     cursor: pointer;
 }
 
+.hire-me-button {
+    position: absolute;
+    top: 0;
+    left: 130px;
+    font-size: 60px;
+    color: white;
+}
+
+.hire-me-button:hover {
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.hire-me-button div {
+    position: absolute;
+    top: 25%;
+    left: 22%;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #f6361d;
+    animation: 1s blink forwards linear infinite;
+}
+
 .main-left {
     width: 100%;
-    background-color: #f6511d;
+    background-color: #f6361d;
     display: grid;
     transition: 500ms;
 }
@@ -85,13 +108,14 @@ body {
 .social a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 20px;
+    font-size: 24px;
     transition: 250ms;
 }
 
 .social a:hover {
     color: white;
     text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
 }
 
 .bottom-left-button {
@@ -99,7 +123,7 @@ body {
     bottom: 2vh;
     left: 2%;
     letter-spacing: 2px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     display: flex;
     color: rgba(255, 255, 255, 0.7);
@@ -123,7 +147,7 @@ body {
     transition: 500ms;
 }
 
-.contact {
+.contact-button {
     writing-mode: vertical-rl;
     text-orientation: upright;
     position: absolute;
@@ -138,7 +162,7 @@ body {
     cursor: pointer;
 }
 
-.contact:hover {
+.contact-button:hover {
     color: white;
     text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
 }
@@ -148,7 +172,7 @@ body {
     bottom: 2vh;
     right: 2%;
     letter-spacing: 2px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     display: flex;
     color: rgba(255, 255, 255, 0.7);
@@ -222,6 +246,7 @@ body {
 .internship:hover {
     color: white;
     text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
 }
 
 .intro-line-1 {
@@ -235,17 +260,86 @@ body {
     position: absolute;
     width: 100%;
     height: 100vh;
+    top: 0;
+    left: 0;
     display: grid;
     transform: translateX(-100%);
-    background-color: var(--red);
-    overflow-x: hidden;
+    background-color: #f6361d;
+    overflow: hidden;
 }
 
 .about .container {
-    width: 75%;
-    height: 100vh;
-    margin: 15vh auto 0 auto;
-    background-color: red;
+    width: 60%;
+    height: 60vh;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    display: grid;
+    grid-template-columns: 60% max-content 40%;
+}
+
+.about-border {
+    align-self: center;
+    height: 85%;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.about-left {
+    display: grid;
+    height: 70%;
+    width: 90%;
+    margin: auto;
+    grid-template-rows: max-content max-content 1fr max-content max-content;
+}
+
+.about-name {
+    font-weight: 700;
+    font-size: 54px;
+    letter-spacing: 2px;
+}
+
+.about-job {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.career-objective {
+    font-size: 18px;
+    align-self: center;
+}
+
+.education-course {
+    font-size: 20px;
+}
+
+.education-university {
+    font-size: 18px;
+}
+
+.about-right {
+    height: 70%;
+    width: 85%;
+    margin: auto auto auto 5%;
+    font-size: 16px;
+    display: grid;
+    grid-template-rows: max-content 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.links {
+    font-size: 32px;
+    justify-self: right;
+}
+
+.links a {
+    text-decoration: none;
+    color: blue;
+}
+
+.website a {
+    text-decoration: none;
+    color: blue;
 }
 /* /About */
 
@@ -255,22 +349,25 @@ body {
     position: absolute;
     width: 100%;
     height: 100vh;
+    top: 0;
+    left: 0;
     display: grid;
     transform: translateX(100%);
     background-color: var(--blue);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-.projects .container {
-    width: 75%;
-    height: 100vh;
-    margin: 15vh auto 0 auto;
-    background-color: red;
+.container {
+    width: 60%;
+    height: 60vh;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
 }
 /* /Projects */
 
 
-/* Keyframes */
+/* KEYFRAMES */
 @keyframes up {
     100% {
         transform: translateY(0%);
@@ -286,15 +383,18 @@ body {
     }
 }
 
-@keyframes move-left {
-    100% {
-        transform: translateX(-100%);
+@keyframes blink {
+    0% {
+        color: var(--red);
+    }
+    50% {
+        color: var(--blue);
     }
 }
 
-@keyframes move-right {
+@keyframes move-left {
     100% {
-        transform: translateX(100%);
+        transform: translateX(-100%);
     }
 }
 
@@ -303,29 +403,99 @@ body {
         transform: translateX(0%);
     }
 }
-/* /Keyframes */
 
-@media screen and (max-width: 820px) {
+@keyframes move-right {
+    100% {
+        transform: translateX(100%);
+    }
+}
+/* /KEYFRAMES */
+
+
+/* RESPONSIVE */
+
+/* Medium Device */
+@media screen and (max-width: 1340px) {
+    .about .container {
+        width: 80%;
+    }
+
+    .hire-me-button {
+        left: 120px;
+    }
+}
+
+@media screen and (max-width: 840px) {    
     .bottom-left-button, .bottom-right-button {
         bottom: 6%;
         letter-spacing: 0;
+    }
+
+    .hire-me-button {
+        left: 105px;
+    }
+
+    .about .container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr max-content 1fr;
+        margin: 15vh auto auto auto;
+    }
+
+    .about-border {
+        justify-self: center;
+        height: 1px;
+        width: 90%;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .about-left {
+        height: 90%;
+    }
+
+    .about-name {
+        font-size: 42px;
+    }
+
+    .about-job {
+        font-size: 24px;
+    }
+
+    .career-objective {
+        font-size: 18px;
+    }
+
+    .education-course {
+        font-size: 20px;
+    }
+
+    .education-university {
+        font-size: 16px;
+    }
+
+    .links {
+        font-size: 32px;
+    }
+
+    .about-right {
+        height: 90%;
+        font-size: 16px;
+    }
+
+    .projects .container {
+        width: 90%;
+        margin: 15vh auto auto auto;
     }
 }
 
 /* Small Device */
 @media screen and (max-width: 720px) {
 
-    body {
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
     .front-background {
         top: 0;
         left: 0;
         height: 100vh;
         width: 100%;
-        overflow: hidden;
     }
 
     .logo {
@@ -341,7 +511,7 @@ body {
         top: 45vh;
     }
 
-    .contact {
+    .contact-button {
         font-size: 14px;
         letter-spacing: 4px;
         right: 5%;
@@ -353,22 +523,23 @@ body {
         letter-spacing: 0;
     }
 
+    .arrow {
+        font-size: 32px;
+    }
+
     .intro-container {
         top: 5vh;
     }
 
     .intro-title {
-        display: block;
         font-size: 28px;
     }
 
     .intro-1 {
-        display: block;
         font-size: 16px;
     }
 
     .intro-2 {
-        display: block;
         font-size: 12px;
     }
 
@@ -376,8 +547,50 @@ body {
         display: none;
     }
 
-    .about .container, .projects .container{
-        width: 85%;
+    .about .container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr max-content 1fr;
+    }
+
+    .about-border {
+        justify-self: center;
+        height: 2px;
+        width: 90%;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .about-left {
+        height: 85%;
+    }
+
+    .about-name {
+        font-size: 32px;
+    }
+
+    .about-job {
+        font-size: 18px;
+    }
+
+    .career-objective {
+        font-size: 14px;
+    }
+
+    .education-course {
+        font-size: 16px;
+    }
+
+    .education-university {
+        font-size: 12px;
+    }
+
+    .links {
+        font-size: 24px;
+    }
+
+    .about-right {
+        height: 90%;
+        font-size: 14px;
     }
 }
-/* /Small Device */
+/* Small Device */

@@ -4,23 +4,7 @@ const mainLeft = document.querySelector('.main-left');
 const mainRight = document.querySelector('.main-right');
 const about = document.querySelector('.about');
 const projects = document.querySelector('.projects');
-
-
-const projectsActive = () => {
-    mainLeft.style.backgroundColor = "#00a6ed";
-}
-
-const projectsInactive = () => {
-    mainLeft.style.backgroundColor = "#f6511d";
-}
-
-const aboutActive = () => {
-    mainRight.style.backgroundColor = "#f6511d";
-}
-
-const aboutInactive = () => {
-    mainRight.style.backgroundColor = "#00a6ed";
-}
+const contact = document.querySelector('.contact');
 
 const homeAbout = () => {
     home.style.transform = "translateX(100%)";
@@ -48,4 +32,9 @@ const projectsHome = () => {
     home.style.transition = "1s ease-in-out";
     projects.style.transform = "translateX(100%)";
     projects.style.transition = "1s ease-in-out";
+}
+
+const homeContact = () => {
+    contact.style.transform = "translateY(0%)";
+    contact.style.transition = "1s ease-in-out";
 }
