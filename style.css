@@ -357,13 +357,116 @@ body {
     overflow: hidden;
 }
 
-.container {
+.projects .container {
     width: 60%;
     height: 60vh;
     margin: auto;
     background-color: rgb(255, 255, 255);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
 }
+
+.project-1 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.project-1 img {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    filter: opacity(30%);
+}
+
+.button-up {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 100%;
+    display: grid;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.button-down {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 100%;
+    display: grid;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.button-up .fas, .button-down .fas {
+    align-self: center;
+    justify-self: center;
+    font-size: 42px;
+
+}
+
+.project-desc {
+    position: absolute;
+    width: 55%;
+    height: 50vh;
+    top: 25.5vh;
+    left: 22.5%;
+    display: grid;
+    grid-template-rows: max-content 2fr 1fr max-content max-content max-content;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project-desc .title, .project-desc .description, .project-border, .button-up, .button-down{
+    grid-column: 1 / 6;
+}
+
+.project-desc .title {
+    font-size: 38px;
+    font-weight: 700;
+    justify-self: center;
+    align-self: center;
+}
+
+.project-desc .description {
+    font-size: 18px;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+
+.project-border {
+    height: 2px;
+    width: 90%;
+    justify-self: center;
+    background-color: white;
+}
+
+.github-project, .visit-project {
+    padding: 30px;
+    font-size: 18px;
+    align-self: center;
+}
+
+.github-project {
+    font-size: 32px;
+}
+
+.github-project a, .visit-project a {
+    text-decoration: underline;
+    color: rgb(150, 150, 255);
+    
+}
+
+.visit-project {
+    justify-self: right;
+}
+
 /* /Projects */
 
 
@@ -483,8 +586,43 @@ body {
     }
 
     .projects .container {
+        height: 50vh;
         width: 90%;
-        margin: 15vh auto auto auto;
+        margin: auto;
+    }
+
+    .project-desc {
+        width: 85%;
+        height: 45vh;
+        top: 27.5vh;
+        left: 7.5%;
+        display: grid;
+        grid-template-rows: max-content 2fr 1fr max-content max-content max-content;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-desc .title {
+        font-size: 24px;
+    }
+
+    .project-desc .description {
+        grid-template-columns: max-content;
+        grid-template-rows: max-content max-content;
+        justify-items: center;
+        font-size: 16px;
+    }
+
+    .visit-project {
+        font-size: 16px;
+    }
+
+    .button-up, .button-down {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .button-up .fas, .button-down .fas {
+        font-size: 30px;
     }
 }
 
