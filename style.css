@@ -90,7 +90,7 @@ body {
 .social {
     position: absolute;
     top: 50%;
-    left: 2%;
+    right: 2%;
     transform: translateY(-50%);
 }
 
@@ -145,26 +145,6 @@ body {
     width: 100%;
     background-color: #00a6ed;
     transition: 500ms;
-}
-
-.contact-button {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    position: absolute;
-    top: 50%;
-    right: 2%;
-    transform: translateY(-50%);
-    letter-spacing: 5px;
-    text-decoration: none;
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.7);
-    transition: 250ms;
-    cursor: pointer;
-}
-
-.contact-button:hover {
-    color: white;
-    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
 }
 
 .bottom-right-button {
@@ -366,7 +346,7 @@ body {
     overflow: hidden;
 }
 
-.project-1 {
+.project {
     height: 100%;
     width: 100%;
     display: grid;
@@ -374,11 +354,12 @@ body {
     color: white;
 }
 
-.project-1 img {
+.project img {
     width: 100%;
     align-self: center;
     justify-self: center;
     filter: opacity(30%);
+    transition: opacity 500ms ease;
 }
 
 .button-up {
@@ -430,6 +411,12 @@ body {
     font-weight: 700;
     justify-self: center;
     align-self: center;
+    display: grid;
+    grid-template-rows: max-content max-content;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 300ms ease;
 }
 
 .project-desc .description {
@@ -438,6 +425,7 @@ body {
     justify-self: center;
     display: grid;
     grid-template-columns: max-content max-content;
+    transition: opacity 300ms ease;
 }
 
 .project-border {
@@ -445,12 +433,14 @@ body {
     width: 90%;
     justify-self: center;
     background-color: white;
+    transition: opacity 300ms ease;
 }
 
 .github-project, .visit-project {
     padding: 30px;
     font-size: 18px;
     align-self: center;
+    transition: opacity 300ms ease;
 }
 
 .github-project {
@@ -494,24 +484,6 @@ body {
         color: var(--blue);
     }
 }
-
-@keyframes move-left {
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes move-back {
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes move-right {
-    100% {
-        transform: translateX(100%);
-    }
-}
 /* /KEYFRAMES */
 
 
@@ -525,6 +497,14 @@ body {
 
     .hire-me-button {
         left: 120px;
+    }
+
+    .project-desc .title {
+        font-size: 31px;
+    }
+
+    .project-desc .description {
+        font-size: 15px;
     }
 }
 
@@ -602,7 +582,7 @@ body {
     }
 
     .project-desc .title {
-        font-size: 24px;
+        font-size: 21px;
     }
 
     .project-desc .description {
@@ -645,13 +625,6 @@ body {
     }
 
     .social {
-        left: 5%;
-        top: 45vh;
-    }
-
-    .contact-button {
-        font-size: 14px;
-        letter-spacing: 4px;
         right: 5%;
         top: 45vh;
     }

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2ce75ae504.js" crossorigin="anonymous"></script>
 
-    <title>Home</title>
+    <title>Andre's Portfolio</title>
 </head>
 
 <body>
@@ -16,8 +16,13 @@
 
         <div class="front-background">
             <a class="logo" href="/">Dre</a>
-            <a class="hire-me-button"><i class="fas fa-comment"><div><p>Hire</p>Me!</div></i></a>
+            <a class="hire-me-button" onclick="homeAbout()"><i class="fas fa-comment"><div><p>Hire</p>Me!</div></i></a>
             <div class="main-left">
+                
+                <a class="bottom-left-button" onclick="homeAbout()"><i class="fas fa-arrow-down"></i><div class="text">About</div></i></a>
+            </div>
+
+            <div class="main-right">
                 <div class="social">
                     <ul>
                         <li><a href="https://www.facebook.com/andrehanjaya01"><i class="fab fa-facebook-square"></i></i></a></li>
@@ -25,11 +30,6 @@
                         <li><a href="https://github.com/andrehhh"><i class="fab fa-github-square"></i></a></li>
                     </ul>
                 </div>
-                <a class="bottom-left-button" onclick="homeAbout()"><i class="fas fa-arrow-down"></i><div class="text">About</div></i></a>
-            </div>
-
-            <div class="main-right">
-                <a class="contact-button" onclick="homeContact()">contact</a>
                 <a class="bottom-right-button" onclick="homeProjects()"><div class="text">Projects</div><i class="fas fa-arrow-down"></i></a>
             </div>
         </div>
@@ -56,7 +56,6 @@
     <!-- About -->
     <div class="about">
         <a class="logo" onclick="aboutHome()">Dre</a>
-        <a class="hire-me-button"><i class="fas fa-comment"><div><p>Hire</p>Me!</div></i></a>
         <a class="bottom-right-button arrow" onclick="aboutHome()"><div class="text">Home</div><i class="fas fa-arrow-down"></i></a>
         <div class="container">
             <div class="about-left">
@@ -85,32 +84,19 @@
     <!-- Projects -->
     <div class="projects">
         <a class="logo" onclick="projectsHome()">Dre</a>
-        <a class="hire-me-button"><i class="fas fa-comment"><div><p>Hire</p>Me!</div></i></a>
         <a class="bottom-left-button arrow" onclick="projectsHome()"><i class="fas fa-arrow-down"></i><div class="text">Home</div></i></a>
         <div class="container">
-            <div class="project-1">
+            <div class="project">
                 <img src="img-projects/inventory-1.PNG">
                 <div class="project-desc">
-                    <div class="button-up"><i class="fas fa-arrow-up"></i></div>
-                    <div class="title">Web Inventory System</div>
+                    <div class="button-up" onclick="projectUp()"><i class="fas fa-arrow-up"></i></div>
+                    <div class="title"><div>Web Inventory System</div>(PHP, MySQL)</div>
                     <div class="description"><div>A personal project I did during my&nbsp;</div>2019 summer break</div>
                     <div class="project-border"></div>
-                    <div class="github-project"><a href="#"><i class="fab fa-github-square"></i></a></div>
-                    <div class="visit-project"><a href="#">Visit Project</a></div>
-                    <div class="button-down"><i class="fas fa-arrow-down"></i></div>
+                    <div class="github-project"><a href="https://github.com/andrehhh/WebInventory2019" target="_blank"><i class="fab fa-github-square"></i></a></div>
+                    <div class="visit-project"><a href="WebInventory2019" target="_blank">Visit Project</a></div>
+                    <div class="button-down" onclick="projectDown()"><i class="fas fa-arrow-down"></i></div>
                 </div>
-            </div>
-            <div class="project-2">
-
-            </div>
-            <div class="project-3">
-
-            </div>
-            <div class="project-4">
-
-            </div>
-            <div class="project-5">
-
             </div>
         </div>
     </div>
